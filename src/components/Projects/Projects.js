@@ -1,13 +1,13 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import ProjectCard from "./ProjectCards";
+import { Col, Container, Row } from "react-bootstrap";
+import conways from "../../Assets/Projects/conways.gif";
+import job_board from "../../Assets/Projects/job_portal.png";
+import municipality_scraper from "../../Assets/Projects/municipality_scraper.png";
+import scala_api from "../../Assets/Projects/scala_api.png";
+import social_media_api from "../../Assets/Projects/social_media_api.png";
+import tinybasic from "../../Assets/Projects/tinybasic.png";
 import Particle from "../Particle";
-import leaf from "../../Assets/Projects/leaf.png";
-import emotion from "../../Assets/Projects/emotion.png";
-import editor from "../../Assets/Projects/codeEditor.png";
-import chatify from "../../Assets/Projects/chatify.png";
-import suicide from "../../Assets/Projects/suicide.png";
-import bitsOfCode from "../../Assets/Projects/blog.png";
+import ProjectCard from "./ProjectCards";
 
 function Projects() {
   return (
@@ -23,68 +23,63 @@ function Projects() {
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={chatify}
+              imgPath={social_media_api}
               isBlog={false}
-              title="Chatify"
-              description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
-              ghLink="https://github.com/soumyajit4419/Chatify"
-              demoLink="https://chatify-49.web.app/"
+              title="Social Media API"
+                description="Initially started as a simple blog API, this project has evolved into a full-fledged social media API built with FastAPI. It includes features like role-based access control, subscription-based notifications, WebSockets for real-time updates, content moderation, Redis caching, full-text search, and more. The project is a learning journey in FastAPI and its ecosystem, with plans for continuous feature additions and documentation through blogs."
+              ghLink="https://github.com/ishworii/FastAPI_Social_Media_API"
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={bitsOfCode}
+              imgPath={scala_api}
               isBlog={false}
-              title="Bits-0f-C0de"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
-              ghLink="https://github.com/soumyajit4419/Bits-0f-C0de"
-              demoLink="https://blogs.soumya-jit.tech/"
+              title="Scala Todo API"
+              description="A simple RESTful API built with Scala and Pekko Framework. This API allows users to create, read, update, and delete tasks. The API is built using the Pekko Framework and uses an in-memory database to store tasks."
+              ghLink="https://github.com/ishworii/Scala-Todo-API"
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={editor}
+              imgPath={conways}
               isBlog={false}
-              title="Editor.io"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
-              ghLink="https://github.com/soumyajit4419/Editor.io"
-              demoLink="https://editor.soumya-jit.tech/"              
+              title="Conway-s-Game-of-Life in Rust"
+              description="A simple implementation of Conway's Game of Life in Rust. The project uses the ggez game engine to render the game and provides a simple GUI to interact with the game. The project is a learning journey in Rust and game development."
+              ghLink="https://github.com/ishworii/Conway-s-Game-of-Life"         
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={leaf}
+              imgPath={tinybasic}
               isBlog={false}
-              title="Plant AI"
-              description="Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model."
-              ghLink="https://github.com/soumyajit4419/Plant_AI"
-              demoLink="https://plant49-ai.herokuapp.com/"
+              title="TinyBasic Transpiler"
+              description="A transpiler that converts TinyBasic source code into C code. Built using Rust, this tool allows users to write programs in TinyBasic and generate equivalent C code, making it easier to integrate with modern systems and compilers."
+
+              ghLink="https://github.com/ishworii/TinyBASIC-Transpiler"
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={suicide}
+              imgPath={job_board}
               isBlog={false}
-              title="Ai For Social Good"
-              description="Using 'Natural Launguage Processing' for the detection of suicide-related posts and user's suicide ideation in cyberspace  and thus helping in sucide prevention."
-              ghLink="https://github.com/soumyajit4419/AI_For_Social_Good"
+              title="Job board API and Frontend"
+                description="A comprehensive job board application with a backend built using FastAPI and SQLite, featuring authentication for both employers and job seekers. The frontend is developed using ReactJS, providing functionalities such as user registration, login, job posting, job searching, and application management."
+              ghLink="https://github.com/ishworii/Job_board_API"
               // demoLink="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" <--------Please include a demo link here
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={emotion}
+              imgPath={municipality_scraper}
               isBlog={false}
-              title="Face Recognition and Emotion Detection"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
-              ghLink="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
-              // demoLink="https://blogs.soumya-jit.tech/"      <--------Please include a demo link here 
+              title="Municipality Website Scrapers"
+                description="A collection of scrapers written using Selenium in Python to scrape publicly available datasets from various municipality websites into a single repository. This project aims to automate data collection and aggregation for easier access and analysis."
+              ghLink="https://github.com/ishworii/scrapers"
             />
           </Col>
         </Row>

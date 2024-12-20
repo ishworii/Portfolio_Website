@@ -1,11 +1,11 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
 import {
-  SiVisualstudiocode,
-  SiPostman,
-  SiSlack,
-  SiVercel,
   SiMacos,
+  SiPostman,
+  SiPycharm,
+  SiSlack,
+  SiVisualstudiocode,
 } from "react-icons/si";
 
 function Toolstack() {
@@ -24,7 +24,7 @@ function Toolstack() {
         <SiSlack />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiVercel />
+        <SiPycharm />
       </Col>
     </Row>
   );

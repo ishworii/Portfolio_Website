@@ -1,13 +1,12 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import myImg from "../../Assets/avatar.svg";
-import Tilt from "react-parallax-tilt";
+import { Col, Container, Row } from "react-bootstrap";
 import {
   AiFillGithub,
-  AiOutlineTwitter,
-  AiFillInstagram,
+  AiOutlineTwitter
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
+import Tilt from "react-parallax-tilt";
+import myImg from "../../Assets/my-avatar.svg";
 
 function Home2() {
   return (
@@ -16,40 +15,46 @@ function Home2() {
         <Row>
           <Col md={8} className="home-about-description">
             <h1 style={{ fontSize: "2.6em" }}>
-              LET ME <span className="purple"> INTRODUCE </span> MYSELF
+              WANT TO <span className="purple">KNOW</span> WHAT MAKES ME TICK?
             </h1>
             <p className="home-about-body">
-              I fell in love with programming and I have at least learnt
-              something, I think… 🤷‍♂️
+              One day I started tinkering with code, and before I knew it, 
+              I was hooked! Now I'm diving deep into the backend universe 🚀
               <br />
-              <br />I am fluent in classics like
+              <br />
+              I've mastered the art of speaking to computers in
               <i>
-                <b className="purple"> C++, Javascript and Go. </b>
+                <b className="purple"> C, C++, Python, and Scala </b>
               </i>
+              (and I'm working on my JavaScript accent! 😉)
               <br />
               <br />
-              My field of Interest's are building new &nbsp;
+              What gets me excited? I'm like a backend architect crafting
               <i>
-                <b className="purple">Web Technologies and Products </b> and
-                also in areas related to{" "}
+                <b className="purple"> digital skyscrapers </b> and
+                solving puzzles in{" "}
                 <b className="purple">
-                  Blockchain.
+                  scalable system design
                 </b>
               </i>
               <br />
               <br />
-              Whenever possible, I also apply my passion for developing products
-              with <b className="purple">Node.js</b> and
+              You'll usually find me wielding <b className="purple">Django</b> and
               <i>
                 <b className="purple">
                   {" "}
-                  Modern Javascript Library and Frameworks
+                  FastAPI like a coding ninja
                 </b>
               </i>
-              &nbsp; like
+              , with
               <i>
-                <b className="purple"> React.js and Next.js</b>
+                <b className="purple"> Selenium as my trusty sidekick</b>
               </i>
+              . These days, I'm on an exciting adventure learning
+              <i>
+                <b className="purple"> Scala's backend superpowers</b>
+              </i>
+              , while keeping React.js in my toolkit for those frontend moments!
             </p>
           </Col>
           <Col md={4} className="myAvtar">
@@ -60,14 +65,14 @@ function Home2() {
         </Row>
         <Row>
           <Col md={12} className="home-about-social">
-            <h1>FIND ME ON</h1>
+            <h1>LET'S CONNECT!</h1>
             <p>
-              Feel free to <span className="purple">connect </span>with me
+              Don't be shy, my social links don't bite! <span className="purple">Say hello </span> 👋
             </p>
             <ul className="home-about-social-links">
               <li className="social-icons">
                 <a
-                  href="https://github.com/soumyajit4419"
+                  href="https://github.com/ishworii"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"
@@ -77,7 +82,7 @@ function Home2() {
               </li>
               <li className="social-icons">
                 <a
-                  href="https://twitter.com/Soumyajit4419"
+                  href="https://x.com/ishworkhanal21"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"
@@ -87,22 +92,12 @@ function Home2() {
               </li>
               <li className="social-icons">
                 <a
-                  href="https://www.linkedin.com/in/soumyajit4419/"
+                  href="https://www.linkedin.com/in/ishwor-khanal-2654951ab/"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"
                 >
                   <FaLinkedinIn />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
-                  href="https://www.instagram.com/soumyajit4419"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour home-social-icons"
-                >
-                  <AiFillInstagram />
                 </a>
               </li>
             </ul>
@@ -112,4 +107,5 @@ function Home2() {
     </Container>
   );
 }
+
 export default Home2;

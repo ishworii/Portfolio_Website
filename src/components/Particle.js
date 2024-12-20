@@ -19,11 +19,14 @@ function Particle() {
             opacity: 0.03,
           },
           move: {
-            direction: "right",
-            speed: 0.05,
+            enable: true,
+            speed: 0.5, // Increase speed for more noticeable random motion
+            random: true, // Enable random movement
+            direction: "none", // Set to none for random directions
           },
           size: {
-            value: 1,
+            value: 5, // Increased size of particles
+            random: true, // Make particle sizes random for variation
           },
           opacity: {
             anim: {

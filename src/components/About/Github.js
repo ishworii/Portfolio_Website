@@ -1,6 +1,6 @@
 import React from "react";
-import GitHubCalendar from "react-github-calendar";
 import { Row } from "react-bootstrap";
+import GitHubCalendar from "react-github-calendar";
 
 function Github() {
   return (
@@ -9,7 +9,7 @@ function Github() {
         Days I <strong className="purple">Code</strong>
       </h1>
       <GitHubCalendar
-        username="soumyajit4419"
+        username="ishworii"
         blockSize={15}
         blockMargin={5}
         color="#c084f5"
