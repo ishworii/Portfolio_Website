@@ -1,4 +1,6 @@
 {
+  "framework": "vite",
+  "outputDirectory": "dist",
   "redirects": [
     { "source": "/resume", "destination": "/resume.pdf", "permanent": false },
     { "source": "/project", "destination": "/#work", "permanent": false }
