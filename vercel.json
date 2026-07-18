@@ -1,0 +1,37 @@
+{
+  "redirects": [
+    { "source": "/resume", "destination": "/resume.pdf", "permanent": false },
+    { "source": "/project", "destination": "/#work", "permanent": false }
+  ],
+  "rewrites": [
+    {
+      "source": "/whoami",
+      "has": [{ "type": "header", "key": "user-agent", "value": ".*([Cc]url|[Ww]get|HTTPie|httpie|[Pp]ostman).*" }],
+      "destination": "/api/whoami"
+    },
+    {
+      "source": "/about",
+      "has": [{ "type": "header", "key": "user-agent", "value": ".*([Cc]url|[Ww]get|HTTPie|httpie|[Pp]ostman).*" }],
+      "destination": "/api/about"
+    },
+    {
+      "source": "/projects",
+      "has": [{ "type": "header", "key": "user-agent", "value": ".*([Cc]url|[Ww]get|HTTPie|httpie|[Pp]ostman).*" }],
+      "destination": "/api/projects"
+    },
+    {
+      "source": "/skills",
+      "has": [{ "type": "header", "key": "user-agent", "value": ".*([Cc]url|[Ww]get|HTTPie|httpie|[Pp]ostman).*" }],
+      "destination": "/api/skills"
+    },
+    {
+      "source": "/contact",
+      "has": [{ "type": "header", "key": "user-agent", "value": ".*([Cc]url|[Ww]get|HTTPie|httpie|[Pp]ostman).*" }],
+      "destination": "/api/contact"
+    },
+    {
+      "source": "/((?!api/).*)",
+      "destination": "/index.html"
+    }
+  ]
+}
