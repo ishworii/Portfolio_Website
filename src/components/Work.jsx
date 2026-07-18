@@ -1,6 +1,6 @@
 import { FiGithub } from "react-icons/fi";
 import { projects } from "../data";
-import { spotlight } from "../hooks/spotlight";
+import { resetTilt, spotlight } from "../hooks/spotlight";
 import { useReveal } from "../hooks/useReveal";
 import { TAG_COLORS } from "../tagColors";
 
@@ -12,6 +12,7 @@ function ProjectCard({ project, index, featured }) {
       className={`project-card reveal ${featured ? "featured" : ""}`}
       ref={ref}
       onMouseMove={spotlight}
+      onMouseLeave={resetTilt}
       style={{ "--reveal-delay": `${(index % 3) * 0.08}s` }}
     >
       <div className="repo-strip">

@@ -5,6 +5,9 @@ export default function Footer() {
 
   return (
     <footer className="footer">
+      <div className="footer-giant" aria-hidden="true">
+        ishwori khanal<span>.</span>
+      </div>
       <div className="container footer-inner">
         <span>
           Designed &amp; built by {site.name} · ©{year}

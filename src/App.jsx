@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Nav from "./components/Nav";
+import Cursor from "./components/Cursor";
 import Hero from "./components/Hero";
+import Marquee from "./components/Marquee";
 import Work from "./components/Work";
 import About from "./components/About";
 import Terminal from "./components/Terminal";
@@ -41,9 +43,11 @@ export default function App() {
       )}
       {introSettled && (
         <>
+          <Cursor />
           <Nav />
           <main>
             <Hero />
+            <Marquee />
             <Work />
             <About />
             <Terminal />
