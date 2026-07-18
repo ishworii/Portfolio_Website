@@ -298,10 +298,24 @@ body::before {
 }
 
 .nav-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
   font-family: var(--font-mono);
   font-weight: 600;
   font-size: 1.05rem;
   color: var(--text);
+}
+
+.nav-brand .brand-mark {
+  color: var(--accent);
+  flex-shrink: 0;
+  transition: transform 0.45s var(--ease-out);
+}
+
+/* gliders travel by cycling through rotations; nudge it along on hover */
+.nav-brand:hover .brand-mark {
+  transform: rotate(90deg);
 }
 
 .nav-brand .tilde {

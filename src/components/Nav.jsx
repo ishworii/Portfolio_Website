@@ -54,7 +54,25 @@ export default function Nav() {
       <div className="scroll-progress" ref={progressRef} aria-hidden="true" />
       <div className="container nav-inner">
         <a href="#top" className="nav-brand" onClick={() => setOpen(false)}>
-          <span className="tilde">~</span>/ishwori
+          {/* the glider: smallest spaceship in Conway's Game of Life */}
+          <svg
+            className="brand-mark"
+            viewBox="0 0 17 17"
+            width="18"
+            height="18"
+            aria-hidden="true"
+          >
+            <g fill="currentColor">
+              <rect x="6" y="0" width="5" height="5" rx="1" />
+              <rect x="12" y="6" width="5" height="5" rx="1" />
+              <rect x="0" y="12" width="5" height="5" rx="1" />
+              <rect x="6" y="12" width="5" height="5" rx="1" />
+              <rect x="12" y="12" width="5" height="5" rx="1" />
+            </g>
+          </svg>
+          <span>
+            <span className="tilde">~</span>/ishwori
+          </span>
         </a>
 
         <button
