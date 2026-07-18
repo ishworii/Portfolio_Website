@@ -1,31 +1,41 @@
 import { GitHubCalendar } from "react-github-calendar";
+import { FaAws } from "react-icons/fa";
 import {
-  SiCplusplus,
-  SiDjango,
+  SiApacheairflow,
+  SiApachekafka,
+  SiApachespark,
+  SiDatabricks,
+  SiDocker,
   SiFastapi,
-  SiGit,
-  SiMongodb,
+  SiGooglecloud,
   SiPostgresql,
   SiPython,
   SiRust,
   SiScala,
-  SiSelenium,
+  SiSnowflake,
+  SiTerraform,
 } from "react-icons/si";
+import { VscAzure } from "react-icons/vsc";
 import { about, site, skills } from "../data";
 import { spotlight } from "../hooks/spotlight";
 import { useReveal } from "../hooks/useReveal";
 
 const ICONS = {
   python: SiPython,
-  cpp: SiCplusplus,
-  scala: SiScala,
-  rust: SiRust,
-  django: SiDjango,
-  fastapi: SiFastapi,
-  selenium: SiSelenium,
+  spark: SiApachespark,
+  kafka: SiApachekafka,
+  airflow: SiApacheairflow,
+  snowflake: SiSnowflake,
+  databricks: SiDatabricks,
+  aws: FaAws,
+  gcp: SiGooglecloud,
+  azure: VscAzure,
+  terraform: SiTerraform,
+  docker: SiDocker,
   postgresql: SiPostgresql,
-  mongodb: SiMongodb,
-  git: SiGit,
+  fastapi: SiFastapi,
+  rust: SiRust,
+  scala: SiScala,
 };
 
 // amber ramp for the contribution graph, darkest → brightest

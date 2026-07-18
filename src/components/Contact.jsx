@@ -22,7 +22,7 @@ export default function Contact() {
           Let's build something<span className="accent">.</span>
         </h2>
         <p className="contact-body">
-          I'm up for backend work, automation projects, or just a good
+          I'm open to data engineering and backend work, or just a good
           conversation about systems. Email me, I actually reply.
         </p>
         <div className="contact-actions">

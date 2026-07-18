@@ -2,20 +2,20 @@
 // Keep this file free of asset imports so Node can load it directly.
 
 export const site = {
-  name: "Ishwor Khanal",
-  role: "Backend Engineer",
-  email: "ishworkhanal21@gmail.com",
-  location: "Miami, FL",
+  name: "Ishwori Khanal",
+  role: "Senior Data Engineer",
+  email: "ishworikhanal78@gmail.com",
+  location: "Dallas, TX",
   githubUsername: "ishworii",
   resumeUrl: "/resume.pdf",
   roles: [
+    "Senior Data Engineer",
+    "Data Platform Architect",
     "Backend Developer",
-    "API Designer",
-    "Web Scraping Expert",
     "Automation Engineer",
   ],
   lede:
-    "I live in the backend. I design APIs, move data around, and sometimes write a compiler just to see if I can.",
+    "I move data at scale. Cloud pipelines and data platforms by day, APIs, emulators, and the occasional compiler by night.",
 };
 
 export const socials = [
@@ -101,22 +101,27 @@ export const projectsData = [
 
 export const aboutData = {
   paragraphs: [
-    "I'm Ishwor. I grew up in Butwal, Nepal and I'm now in Miami working on a Master's in Information Technology. Before that I earned a Bachelor's in Electronics and Communication Engineering in Pokhara.",
-    "I started tinkering with code one day and never really stopped. These days I live in the backend, designing APIs, building data pipelines, and automating anything I catch myself doing twice.",
-    "Most of my day to day is Python with Django and FastAPI, plus Selenium for scraping. Lately I've been poking at Scala and Rust, which is how the TinyBASIC transpiler happened.",
+    "I'm Ishwori. I grew up in Butwal, Nepal, studied Electronics and Communication Engineering in Pokhara, and I'm now a Senior Data Engineer based in Dallas.",
+    "I've spent 5+ years building cloud data platforms across AWS, Azure, and GCP: automating 120+ enterprise pipelines at Visa, architecting healthcare analytics on BigQuery and Databricks at Kaiser Permanente, and modernizing clinical data workloads at Merck.",
+    "Off the clock I still write code purely for fun. That's where the compilers, emulators, chess engines, and the Game of Life running on this page come from.",
   ],
   interests: ["Chess", "Reading", "Fun side projects"],
 };
 
 export const skillsData = [
   { name: "Python", icon: "python", color: "#5da9e9" },
-  { name: "C / C++", icon: "cpp", color: "#659ad2" },
-  { name: "Scala", icon: "scala", color: "#e45649" },
-  { name: "Rust", icon: "rust", color: "#dea584" },
-  { name: "Django", icon: "django", color: "#44b78b" },
-  { name: "FastAPI", icon: "fastapi", color: "#2bb7a3" },
-  { name: "Selenium", icon: "selenium", color: "#43b02a" },
+  { name: "Spark", icon: "spark", color: "#e25a1c" },
+  { name: "Kafka", icon: "kafka", color: "#94a3b8" },
+  { name: "Airflow", icon: "airflow", color: "#017cee" },
+  { name: "Snowflake", icon: "snowflake", color: "#29b5e8" },
+  { name: "Databricks", icon: "databricks", color: "#ff3621" },
+  { name: "AWS", icon: "aws", color: "#ff9900" },
+  { name: "GCP", icon: "gcp", color: "#4285f4" },
+  { name: "Azure", icon: "azure", color: "#0078d4" },
+  { name: "Terraform", icon: "terraform", color: "#7b42bc" },
+  { name: "Docker", icon: "docker", color: "#2496ed" },
   { name: "PostgreSQL", icon: "postgresql", color: "#699eca" },
-  { name: "MongoDB", icon: "mongodb", color: "#4db33d" },
-  { name: "Git", icon: "git", color: "#f0653e" },
+  { name: "FastAPI", icon: "fastapi", color: "#2bb7a3" },
+  { name: "Rust", icon: "rust", color: "#dea584" },
+  { name: "Scala", icon: "scala", color: "#e45649" },
 ];

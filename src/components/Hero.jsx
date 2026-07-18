@@ -57,12 +57,12 @@ export default function Hero() {
       <GameOfLife />
       <div className="container hero-content" ref={contentRef}>
         <p className="hero-eyebrow">
-          <span className="user">ishwor@backend</span>:~$ {command.typed}
+          <span className="user">ishwori@data</span>:~$ {command.typed}
           {!command.done && <span className="caret caret-sm" aria-hidden="true" />}
         </p>
 
         <h1 className="hero-name">
-          Ishwor
+          Ishwori
           <br />
           Khanal<span className="dot">.</span>
         </h1>

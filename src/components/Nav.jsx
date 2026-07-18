@@ -54,7 +54,7 @@ export default function Nav() {
       <div className="scroll-progress" ref={progressRef} aria-hidden="true" />
       <div className="container nav-inner">
         <a href="#top" className="nav-brand" onClick={() => setOpen(false)}>
-          <span className="tilde">~</span>/ishwor
+          <span className="tilde">~</span>/ishwori
         </a>
 
         <button

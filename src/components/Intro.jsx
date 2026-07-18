@@ -51,7 +51,7 @@ export default function Intro({ onSettled, onDone }) {
       off.width = cols;
       off.height = rows;
       const octx = off.getContext("2d", { willReadFrequently: true });
-      const text = W < 700 ? "ishwor." : "ishwor khanal.";
+      const text = W < 700 ? "ishwori." : "ishwori khanal.";
       let size = Math.floor(rows * 0.5);
       octx.textAlign = "center";
       octx.textBaseline = "middle";

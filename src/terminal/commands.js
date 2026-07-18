@@ -199,7 +199,7 @@ export function createSession(getHistory) {
   let cwd = [];
   const start = Date.now();
 
-  const prompt = () => `guest@ishwor:${displayCwd(cwd)}$`;
+  const prompt = () => `guest@ishwori:${displayCwd(cwd)}$`;
 
   async function run(input) {
     const tokens = tokenize(input.trim());
@@ -357,9 +357,9 @@ export function createSession(getHistory) {
       case "neofetch": {
         const mins = Math.floor((Date.now() - start) / 60000);
         const info = [
-          ["guest@ishwor", ""],
+          ["guest@ishwori", ""],
           ["-------------", ""],
-          ["OS", "IshworOS 1.0 (miami build)"],
+          ["OS", "IshworOS 1.0 (dallas build)"],
           ["Host", window.location.host],
           ["Kernel", "react 19.2 / vite 8"],
           ["Uptime", mins < 1 ? "just booted" : `${mins} min`],

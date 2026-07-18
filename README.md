@@ -1,4 +1,4 @@
-# ishwor khanal · portfolio
+# ishwori khanal · portfolio
 
 Personal site. React 19 + Vite, hand-written CSS, no UI framework.
 

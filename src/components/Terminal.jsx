@@ -4,7 +4,7 @@ import { useReveal } from "../hooks/useReveal";
 
 function banner() {
   return [
-    { spans: [{ t: "ishwor shell v1.0 (miami build)", c: "amber" }] },
+    { spans: [{ t: "ishwori shell v1.0 (dallas build)", c: "amber" }] },
     `this site ships a real API. from your own shell, try: curl ${window.location.host}/projects`,
     "type 'help' to look around. tab completes, arrows recall history.",
     "",
@@ -188,7 +188,7 @@ export default function Terminal() {
               <span />
               <span />
             </div>
-            <span className="title">guest@ishwor</span>
+            <span className="title">guest@ishwori</span>
           </div>
           <div className="terminal-screen" ref={bodyRef}>
             {lines.map((line, i) => (
