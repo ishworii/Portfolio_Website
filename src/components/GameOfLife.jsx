@@ -152,6 +152,23 @@ export default function GameOfLife() {
       stamp(x, y);
     }
 
+    // the terminal's `glider` command releases gliders up here
+    function onSpawn(e) {
+      const count = e.detail?.count || 5;
+      const glider = [[0, -1], [1, 0], [-1, 1], [0, 1], [1, 1]];
+      for (let g = 0; g < count; g++) {
+        const cx = Math.floor(Math.random() * cols);
+        const cy = Math.floor(Math.random() * rows);
+        for (const [dx, dy] of glider) {
+          const x = (cx + dx + cols) % cols;
+          const y = (cy + dy + rows) % rows;
+          grid[y * cols + x] = 1;
+        }
+      }
+      draw();
+    }
+    window.addEventListener("gol:spawn", onSpawn);
+
     resize();
     window.addEventListener("resize", onResize);
     host.addEventListener("click", onClick);
@@ -162,6 +179,7 @@ export default function GameOfLife() {
 
     return () => {
       window.removeEventListener("resize", onResize);
+      window.removeEventListener("gol:spawn", onSpawn);
       host.removeEventListener("click", onClick);
       clearTimeout(resizeTimer);
       clearInterval(stepTimer);

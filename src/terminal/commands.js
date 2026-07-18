@@ -123,6 +123,55 @@ function cowsay(message) {
   return [top, `< ${text} >`, bottom, ...COW.split("\n")];
 }
 
+// the classic `sl` locomotive, for people who can't type ls
+export const TRAIN = String.raw`      ====        ________                ___________
+  _D _|  |_______/        \__I_I_____===__|_________|
+   |(_)---  |   H\________/ |   |        =|___ ___|
+   /     |  |   H  |  |     |   |         ||_| |_||
+  |      |  |   H  |__--------------------| [___] |
+  | ________|___H__/__|_____/[][]~\_______|       |
+  |/ |   |-----------I_____I [][] []  D   |=======|
+__/ =| o |=-~~\  /~~\  /~~\  /~~\ ____Y___________|__
+ |/-=|___|=    ||    ||    ||    |_____/~\___/
+  \_/      \O=====O=====O=====O_/      \_/`;
+
+const CHESS_BOARD = [
+  "  8  ♜ ♞ ♝ ♛ ♚ ♝ ♞ ♜",
+  "  7  ♟ ♟ ♟ ♟ ♟ ♟ ♟ ♟",
+  "  6  · · · · · · · ·",
+  "  5  · · · · · · · ·",
+  "  4  · · · · ♙ · · ·",
+  "  3  · · · · · · · ·",
+  "  2  ♙ ♙ ♙ ♙ · ♙ ♙ ♙",
+  "  1  ♖ ♘ ♗ ♕ ♔ ♗ ♘ ♖",
+  "     a b c d e f g h",
+];
+
+const CHESS_REPLIES = [
+  "interesting. the engine in my head says 0.00, the engine in my heart says attack.",
+  "solid. I castle long anyway. sacrifices are coming.",
+  "you're clearly booked up. game adjourned, play me for real sometime.",
+];
+
+const FORTUNES = [
+  "there are two hard problems in computer science: cache invalidation, naming things, and off by one errors.",
+  "a pipeline that runs on the first try is hiding something.",
+  "the best ETL is the one you never have to think about at 2am.",
+  "chess opening theory and Kafka partitioning: both punish improvisation.",
+  "it works on my machine. we ship my machine. that is what Docker is.",
+  "premature optimization is the root of all evil. premature abstraction is its lawyer.",
+  "the cells at the top of this page have no idea they are a metaphor.",
+];
+
+const COFFEE = [
+  "      ) )",
+  "     ( (",
+  "   ...........",
+  "   |         |]",
+  "   \\         /",
+  "    `-------'",
+];
+
 const NEOFETCH_ART = [
   " _ _    ",
   "(_) | __",
@@ -197,6 +246,7 @@ async function fakeCurl(args) {
 export function createSession(getHistory) {
   const fs = createFs();
   let cwd = [];
+  let chessMoves = 0;
   const start = Date.now();
 
   const prompt = () => `guest@ishwori:${displayCwd(cwd)}$`;
@@ -414,6 +464,44 @@ export function createSession(getHistory) {
 
       case "curl":
         return fakeCurl(args);
+
+      case "sl":
+        return [{ train: true }, line(s("have you tried 'ls'?", "muted"))];
+
+      case "glider": {
+        const count = Math.min(parseInt(rest[0], 10) || 5, 25);
+        window.dispatchEvent(
+          new CustomEvent("gol:spawn", { detail: { count } })
+        );
+        return [
+          line(
+            s(`released ${count} glider${count === 1 ? "" : "s"} into the wild. `, "text"),
+            s("scroll to the top and watch.", "amber")
+          ),
+        ];
+      }
+
+      case "chess": {
+        if (!rest[0]) {
+          chessMoves = 0;
+          return [
+            ...CHESS_BOARD,
+            "",
+            line(s("1. e4", "amber"), s("  your move: try 'chess e5'", "muted")),
+          ];
+        }
+        const reply = CHESS_REPLIES[Math.min(chessMoves, CHESS_REPLIES.length - 1)];
+        chessMoves++;
+        if (chessMoves >= CHESS_REPLIES.length) chessMoves = 0;
+        return [line(s(`${rest[0]}, `, "text"), s(reply, "amber"))];
+      }
+
+      case "coffee":
+      case "brew":
+        return [...COFFEE, line(s("brewing ... ready. back to the pipelines.", "amber"))];
+
+      case "fortune":
+        return [FORTUNES[Math.floor(Math.random() * FORTUNES.length)]];
 
       case "sudo":
         return ["nice try. this incident will be reported to absolutely no one."];

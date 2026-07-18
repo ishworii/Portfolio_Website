@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { createSession } from "../terminal/commands.js";
+import { TRAIN, createSession } from "../terminal/commands.js";
 import { useReveal } from "../hooks/useReveal";
 
 function banner() {
@@ -28,6 +28,13 @@ function Line({ line }) {
         <a href={line.link} target="_blank" rel="noreferrer">
           {line.text}
         </a>
+      </div>
+    );
+  }
+  if (line.train) {
+    return (
+      <div className="t-train" aria-label="a steam locomotive drives by">
+        <pre>{TRAIN}</pre>
       </div>
     );
   }

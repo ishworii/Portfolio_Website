@@ -985,6 +985,37 @@ body::before {
   margin-top: 0.35rem;
 }
 
+/* the sl locomotive steams across the screen once */
+.t-train {
+  overflow: hidden;
+  margin-block: 0.4rem;
+}
+
+.t-train pre {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  line-height: 1.25;
+  color: var(--accent);
+  width: max-content;
+  animation: train-ride 5.5s linear both;
+}
+
+@keyframes train-ride {
+  from {
+    transform: translateX(110%);
+  }
+  to {
+    transform: translateX(-105%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .t-train pre {
+    animation: none;
+    transform: none;
+  }
+}
+
 .t-input-row input {
   flex: 1;
   background: transparent;
