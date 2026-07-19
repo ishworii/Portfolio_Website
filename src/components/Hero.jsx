@@ -90,8 +90,8 @@ export default function Hero() {
         </div>
 
         <p className="hero-hint">
-          psst: the background is running Conway's Game of Life. Click it to
-          drop a glider.
+          psst: the background is running Conway's Game of Life. Click anywhere
+          to spark new life.
         </p>
       </div>
     </section>

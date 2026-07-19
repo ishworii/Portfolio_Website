@@ -197,7 +197,13 @@ export default function Terminal() {
             </div>
             <span className="title">guest@ishwori</span>
           </div>
-          <div className="terminal-screen" ref={bodyRef}>
+          <div
+            className="terminal-screen"
+            ref={bodyRef}
+            role="log"
+            aria-live="polite"
+            aria-label="Terminal output"
+          >
             {lines.map((line, i) => (
               <Line key={i} line={line} />
             ))}

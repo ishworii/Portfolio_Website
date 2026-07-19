@@ -43,6 +43,9 @@ export default function App() {
       )}
       {introSettled && (
         <>
+          <a className="skip-link" href="#work">
+            skip to content
+          </a>
           <Cursor />
           <Nav />
           <main>

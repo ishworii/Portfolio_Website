@@ -106,6 +106,26 @@ body::before {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
+/* keyboard users can jump past the hero */
+.skip-link {
+  position: fixed;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 6000;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  background: var(--accent);
+  color: var(--bg);
+  padding: 0.6rem 1.2rem;
+  border-radius: 0 0 8px 8px;
+  transition: top 0.2s ease-out;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
 /* ---------- shared ---------- */
 .container {
   max-width: var(--container);
