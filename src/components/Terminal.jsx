@@ -5,7 +5,7 @@ import { useReveal } from "../hooks/useReveal";
 function banner() {
   return [
     { spans: [{ t: "ishwori shell v1.0 (dallas build)", c: "amber" }] },
-    `this site ships a real API. from your own shell, try: curl ${window.location.host}/projects`,
+    `this site ships a real API. from your own shell, try: curl ${window.location.origin}/projects`,
     "type 'help' to look around. tab completes, arrows recall history.",
     "",
   ];
